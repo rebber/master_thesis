@@ -1,0 +1,72 @@
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H413T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H413T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H463T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H463T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H517T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H517T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H549T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H549T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H552T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H552T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H561T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H561T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H567T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H567T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H568T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H568T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H572T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H572T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H590T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H590T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H597T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H597T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H598T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H598T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H607T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H607T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H641T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H641T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H645T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H645T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H652T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H652T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H654T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H654T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H659T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H659T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H662T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H662T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H664T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H664T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H668T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H668T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H670T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H670T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H675T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H675T-TD1-CS1-capped.genes.bed
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H689T-TD1-CS1-capped.txt | sort -k1,1 -k2,2n | 
+bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/rebecka.bergstrom/cnvkit/MSI-PILOT/segments2genes/H689T-TD1-CS1-capped.genes.bed

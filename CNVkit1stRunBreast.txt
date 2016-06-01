@@ -1,0 +1,335 @@
+#The commands I used for my 1st run (test sort of) of CNVkit
+
+
+#FOR ALL SAMPLES
+
+#TARGETS
+cnvkit.py target /home/Crisp/rebecka/breastv7_QDNAseq_reb/BED_files/klevebring_clinseq_v3.targets.slopped.bed --annotate ~/cnvkit/refFlat_reformatted.txt --split -o my_targets.bed
+#Displayed list of splitting and "Wrote my_targets.bed with 16478 regions"
+
+#ANTITARGETS
+cnvkit.py antitarget /home/Crisp/rebecka/breastv7_QDNAseq_reb/BED_files/klevebring_clinseq_v3.targets.slopped.bed -g ~/cnvkit/access-5kb-mappable.hg19_reformatted.bed -o my_antitargets.bed
+#Displayed "Wrote my_antitargets.bed with 28569 regions"
+
+#exchange a1 etc for actual sample names
+
+#COVERAGE
+#COVERAGE NORMAL TARGETS
+cnvkit.py coverage BAMfiles/a1N_panel_v1.bam my_targets.bed -o a1N.targetcoverage.cnn
+#Displayed:
+#	Processing reads in a1N_panel_v1.bam
+#	Time: 77.902 seconds (40810 reads/sec, 212 bins/sec)
+#	Summary: #bins=16478, #reads=3179195, mean=192.9358, min=0.0, max=1634.78 
+#	Percent reads in regions: 31.049 (of 10239274 mapped)
+#	Wrote a1N.targetcoverage.cnn
+
+cnvkit.py coverage BAMfiles/a2N_panel_v1.bam my_targets.bed -o a2N.targetcoverage.cnn
+#Displayed
+#	Processing reads in a2N_panel_v1.bam
+#	Time: 83.918 seconds (44036 reads/sec, 196 bins/sec)
+#	Summary: #bins=16478, #reads=3695412, mean=224.2634, min=0.0, max=1747.26 
+#	Percent reads in regions: 42.882 (of 8617627 mapped)
+#	Wrote a2N.targetcoverage.cnn
+
+cnvkit.py coverage BAMfiles/a3N_panel_v1.bam my_targets.bed -o a3N.targetcoverage.cnn
+#Displayed: 
+#	Processing reads in a3N_panel_v1.bam
+#	Time: 84.562 seconds (43333 reads/sec, 195 bins/sec)
+#	Summary: #bins=16478, #reads=3664349, mean=222.3783, min=0.0, max=1995.62 
+#	Percent reads in regions: 39.244 (of 9337368 mapped)
+#	Wrote a3N.targetcoverage.cnn
+
+cnvkit.py coverage BAMfiles/a4N_panel_v1.bam my_targets.bed -o a4N.targetcoverage.cnn
+#Displayed:
+#	Processing reads in a4N_panel_v1.bam
+#	Time: 52.815 seconds (37406 reads/sec, 312 bins/sec)
+#	Summary: #bins=16478, #reads=1975608, mean=119.8937, min=0.0, max=978.39 
+#	Percent reads in regions: 29.962 (of 6593620 mapped)
+#	Wrote a4N.targetcoverage.cnn
+
+cnvkit.py coverage BAMfiles/a5N_panel_v1.bam my_targets.bed -o a5N.targetcoverage.cnn
+#Displayed:
+#	Processing reads in a5N_panel_v1.bam
+#	Time: 83.317 seconds (43901 reads/sec, 198 bins/sec)
+#	Summary: #bins=16478, #reads=3657713, mean=221.9756, min=0.0, max=1733.74 
+#	Percent reads in regions: 34.011 (of 10754437 mapped)
+#	Wrote a5N.targetcoverage.cnn
+
+cnvkit.py coverage BAMfiles/a6N_panel_v1.bam my_targets.bed -o a6N.targetcoverage.cnn
+#Displayed:
+#	Processing reads in a6N_panel_v1.bam
+#	Time: 74.965 seconds (43180 reads/sec, 220 bins/sec)
+#	Summary: #bins=16478, #reads=3236998, mean=196.4437, min=0.0, max=1371.22 
+#	Percent reads in regions: 35.742 (of 9056588 mapped)
+#	Wrote a6N.targetcoverage.cnn
+
+cnvkit.py coverage BAMfiles/a7N_panel_v1.bam my_targets.bed -o a7N.targetcoverage.cnn
+#Displayed:
+#	Processing reads in a7N_panel_v1.bam
+#	Time: 59.736 seconds (41203 reads/sec, 276 bins/sec)
+#	Summary: #bins=16478, #reads=2461296, mean=149.3687, min=0.0, max=1272.04 
+#	Percent reads in regions: 40.541 (of 6071065 mapped)
+#	Wrote a7N.targetcoverage.cnn
+
+cnvkit.py coverage BAMfiles/a8N_panel_v1.bam my_targets.bed -o a8N.targetcoverage.cnn
+#Displayed:
+#	Processing reads in a8N_panel_v1.bam
+#	Time: 100.073 seconds (40355 reads/sec, 165 bins/sec)
+#	Summary: #bins=16478, #reads=4038407, mean=245.0788, min=0.0, max=2116.71 
+#	Moved existing file a8N.targetcoverage.cnn -> a8N.targetcoverage.cnn.1
+#	Wrote a8N.targetcoverage.cnn
+
+cnvkit.py coverage BAMfiles/a9N_panel_v1.bam my_targets.bed -o a9N.targetcoverage.cnn
+#Displayed:
+#	Processing reads in a9N_panel_v1.bam
+#	Time: 79.329 seconds (46413 reads/sec, 208 bins/sec)
+#	Summary: #bins=16478, #reads=3681910, mean=223.4440, min=0.0, max=2042.38 
+#	Percent reads in regions: 43.931 (of 8381206 mapped)
+#	Wrote a9N.targetcoverage.cnn
+
+cnvkit.py coverage BAMfiles/a10N_panel_v1.bam my_targets.bed -o a10N.targetcoverage.cnn
+#Displayed:
+#	Processing reads in a10N_panel_v1.bam
+#	Time: 68.023 seconds (40157 reads/sec, 242 bins/sec)
+#	Summary: #bins=16478, #reads=2731563, mean=165.7703, min=0.0, max=1351.73 
+#	Percent reads in regions: 35.724 (of 7646239 mapped)
+#	Wrote a10N.targetcoverage.cnn
+
+
+#COVERAGE NORMAL ANTITARGETS
+cnvkit.py coverage BAMfiles/a1N_panel_v1.bam my_antitargets.bed -o a1N.antitargetcoverage.cnn
+#Displayed:
+#	Processing reads in a1N_panel_v1.bam
+#	Time: 67.790 seconds (132040 reads/sec, 421 bins/sec)
+#	Summary: #bins=28569, #reads=8951009, mean=313.3120, min=0.0, max=124736.6 
+#	Percent reads in regions: 87.418 (of 10239274 mapped)
+#	Wrote a1N.antitargetcoverage.cnn
+
+cnvkit.py coverage BAMfiles/a2N_panel_v1.bam my_antitargets.bed -o a2N.antitargetcoverage.cnn
+#Displayed
+#	Processing reads in a2N_panel_v1.bam
+#	Time: 52.948 seconds (144181 reads/sec, 540 bins/sec)
+#	Summary: #bins=28569, #reads=7634146, mean=267.2178, min=0.0, max=141206.62 
+#	Percent reads in regions: 88.588 (of 8617627 mapped)
+#	Wrote a2N.antitargetcoverage.cnn
+
+cnvkit.py coverage BAMfiles/a3N_panel_v1.bam my_antitargets.bed -o a3N.antitargetcoverage.cnn
+#Displayed: 
+#	Processing reads in a3N_panel_v1.bam
+#	Time: 61.417 seconds (136801 reads/sec, 465 bins/sec)
+#	Summary: #bins=28569, #reads=8401896, mean=294.0914, min=0.0, max=144684.07 
+#	Percent reads in regions: 89.981 (of 9337368 mapped)
+#	Wrote a3N.antitargetcoverage.cnn
+
+cnvkit.py coverage BAMfiles/a4N_panel_v1.bam my_antitargets.bed -o a4N.antitargetcoverage.cnn
+#Displayed:
+#	Processing reads in a4N_panel_v1.bam
+#	Time: 48.022 seconds (122199 reads/sec, 595 bins/sec)
+#	Summary: #bins=28569, #reads=5868257, mean=205.4065, min=0.0, max=80945.81 
+#	Percent reads in regions: 88.999 (of 6593620 mapped)
+#	Wrote a4N.antitargetcoverage.cnn
+
+cnvkit.py coverage BAMfiles/a5N_panel_v1.bam my_antitargets.bed -o a5N.antitargetcoverage.cnn
+#Displayed:
+#	Processing reads in a5N_panel_v1.bam
+#	Time: 68.422 seconds (135375 reads/sec, 418 bins/sec)
+#	Summary: #bins=28569, #reads=9262540, mean=324.2165, min=0.0, max=140562.9 
+#	Percent reads in regions: 86.128 (of 10754437 mapped)
+#	Wrote a5N.antitargetcoverage.cnn
+
+cnvkit.py coverage BAMfiles/a6N_panel_v1.bam my_antitargets.bed -o a6N.antitargetcoverage.cnn
+#Displayed:
+#	Processing reads in a6N_panel_v1.bam
+#	Time: 56.087 seconds (145344 reads/sec, 509 bins/sec)
+#	Summary: #bins=28569, #reads=8151913, mean=285.3412, min=0.0, max=128932.39 
+#	Percent reads in regions: 90.011 (of 9056588 mapped)
+#	Wrote a6N.antitargetcoverage.cnn
+
+cnvkit.py coverage BAMfiles/a7N_panel_v1.bam my_antitargets.bed -o a7N.antitargetcoverage.cnn
+#Displayed:
+#	Processing reads in a7N_panel_v1.bam
+#	Time: 46.139 seconds (121604 reads/sec, 619 bins/sec)
+#	Summary: #bins=28569, #reads=5610685, mean=196.3907, min=0.0, max=98800.37 
+#	Percent reads in regions: 92.417 (of 6071065 mapped)
+#	Wrote a7N.antitargetcoverage.cnn
+
+cnvkit.py coverage BAMfiles/a8N_panel_v1.bam my_antitargets.bed -o a8N.antitargetcoverage.cnn
+#Displayed:
+#	Processing reads in a8N_panel_v1.bam
+#	Time: 76.813 seconds (159102 reads/sec, 372 bins/sec)
+#	Summary: #bins=28569, #reads=12221076, mean=427.7740, min=0.0, max=164633.36 
+#	Percent reads in regions: 89.629 (of 13635192 mapped)
+#	Wrote a8N.antitargetcoverage.cnn
+
+cnvkit.py coverage BAMfiles/a9N_panel_v1.bam my_antitargets.bed -o a9N.antitargetcoverage.cnn
+#Displayed:
+#	Processing reads in a9N_panel_v1.bam
+#	Time: 45.606 seconds (168385 reads/sec, 626 bins/sec)
+#	Summary: #bins=28569, #reads=7679387, mean=268.8014, min=0.0, max=142337.83 
+#	Percent reads in regions: 91.626 (of 8381206 mapped)
+#	Wrote a9N.antitargetcoverage.cnn
+
+cnvkit.py coverage BAMfiles/a10N_panel_v1.bam my_antitargets.bed -o a10N.antitargetcoverage.cnn
+#Displayed:
+#	Processing reads in a10N_panel_v1.bam
+#	Time: 44.725 seconds (152743 reads/sec, 639 bins/sec)
+#	Summary: #bins=28569, #reads=6831383, mean=239.1187, min=0.0, max=111638.24 
+#	Percent reads in regions: 89.343 (of 7646239 mapped)
+#	Wrote a10N.antitargetcoverage.cnn
+
+
+#REFERENCE pooled
+cnvkit.py reference -o reference10breast.cnn -f /proj/b2010040/private/nobackup/autoseq-genome/genome/human_g1k_v37_decoy.fasta *N*targetcoverage.cnn
+#Displayed: {first a lot of steps it was doing, then a list of the resulting coverages, then:}
+#	Antitargets: 12 (0.0420%) bins failed filters
+#	Wrote reference10breast.cnn
+
+
+#########################################
+#FOR SAMPLE a1Textr2
+#########################################
+
+#COVERAGE TUMOR TARGETS
+cnvkit.py coverage BAMfiles/a1Textr2_panel_v1.bam my_targets.bed -o a1Textr2.targetcoverage.cnn
+#Displayed: 
+#	Processing reads in a1Textr2_panel_v1.bam
+#	Time: 78.844 seconds (42440 reads/sec, 209 bins/sec)
+#	Summary: #bins=16478, #reads=3346162, mean=203.0685, min=0.0, max=1245.69 
+#	Percent reads in regions: 41.200 (of 8121672 mapped)
+#	Wrote a1Textr2.targetcoverage.cnn
+
+#COVERAGE TUMOR TARGETS with different counting of reads (middle instead of start in bin?)
+cnvkit.py coverage -c BAMfiles/a1Textr2_panel_v1.bam my_targets.bed -o a1Textr2.targetcoverage2.cnn #Just to try if this alternative also works
+#Displayed: 
+#	Detected file format: BED
+#	Processing chromosome 1 of a1Textr2_panel_v1.bam 
+3	{etc}
+#	Time: 123.967 seconds (27909 reads/sec, 133 bins/sec)
+#	Summary: #bins=16478, #reads=3459777, mean=209.9634, min=0, max=1278 
+#	Percent reads in regions: 42.599 (of 8121672 mapped)
+#	Wrote a1Textr2.targetcoverage2.cnn
+
+#COVERAGE TUMOR ANTITARGETS
+cnvkit.py coverage BAMfiles/a1Textr2_panel_v1.bam my_antitargets.bed -o a1Textr2.antitargetcoverage.cnn
+#Displayed:
+#	Processing reads in a1Textr2_panel_v1.bam
+#	Time: 47.343 seconds (164779 reads/sec, 603 bins/sec)
+#	Summary: #bins=28569, #reads=7801167, mean=273.0641, min=0.0, max=123882.66 
+#	Percent reads in regions: 96.054 (of 8121672 mapped)
+#	Wrote a1Textr2.antitargetcoverage.cnn
+
+#FIX
+cnvkit.py fix a1Textr2.targetcoverage.cnn a1Textr2.antitargetcoverage.cnn reference10breast.cnn -o a1Textr2.cnr
+#Displayed: {steps about the process}
+#	Antitargets are 1.36 x more variable than antitargets
+#	Wrote a1Textr2.cnr
+
+#SEGMENT
+cnvkit.py segment a1Textr2.cnr -o a1Textr2.cns
+#Displayed:
+#	Dropped 538 outlier bins:
+#	{some dropped(?) bins}
+#	Wrote a1Textr2.cns
+
+#CALL
+cnvkit.py call a1Textr2.cns -o a1Textr2.call.cns
+#Displayed:
+#	Treating sample gender as female
+#	Calling copy number with thresholds: -1.1 => 0, -0.25 => 1, 0.2 => 2, 0.7 => 3
+#	Wrote a1Textr2.call.cns
+
+#SCATTER plot
+cnvkit.py scatter a1Textr2.cnr -s a1Textr2.cns -o a1Textr2-scatter.pdf
+#Displayed:
+#	Wrote a1Textr2-scatter.pdf 
+
+cnvkit.py scatter a1Textr2.cnr -s a1Textr2.call.cns -o a1Textr2-scatter.call.pdf
+#Displayed:
+#	Wrote a1Textr2-scatter.call.pdf
+
+#DIAGRAM
+cnvkit.py diagram -s a1Textr2.cns a1Textr2.cnr
+#Displayed:
+#	Relative log2 coverage of X chromosome: -0.0088193 (assuming female)
+#	Relative log2 coverage of X chromosome: -0.100052 (assuming female)
+#	Wrote a1Textr2-diagram.pdf
+
+cnvkit.py diagram -s a1Textr2.call.cns a1Textr2.cnr -o a1Textr2-diagram.call.pdf
+#Displayed:
+#	Relative log2 coverage of X chromosome: -0.0088193 (assuming female)
+#	Relative log2 coverage of X chromosome: -0.322576 (assuming female)
+#	Wrote a1Textr2-diagram.call.pdf
+
+#########################################
+#FOR SAMPLE a2T
+#########################################
+#COVERAGE TUMOR TARGETS
+cnvkit.py coverage BAMfiles/a2T_panel_v1.bam my_targets.bed -o a2T.targetcoverage.cnn
+
+#COVERAGE TUMOR ANTITARGETS
+cnvkit.py coverage BAMfiles/a2T_panel_v1.bam my_antitargets.bed -o a2T.antitargetcoverage.cnn
+
+#FIX
+cnvkit.py fix a2T.targetcoverage.cnn a2T.antitargetcoverage.cnn reference10breast.cnn -o a2T.cnr
+
+#SEGMENT
+cnvkit.py segment a2T.cnr -o a2T.cns
+
+#CALL
+cnvkit.py call a2T.cns -o a2T.call.cns
+
+#SCATTER plot
+cnvkit.py scatter a2T.cnr -s a2T.cns -o a2T-scatter.pdf
+cnvkit.py scatter a2T.cnr -s a2T.call.cns -o a2T-scatter.call.pdf
+
+
+#DIAGRAM
+cnvkit.py diagram -s a2T.cns a2T.cnr
+cnvkit.py diagram -s a2T.cns a2T.cnr -o a2T-diagram.call.pdf
+
+
+#########################################
+#FOR SAMPLE a3T
+#########################################
+#COVERAGE TUMOR TARGETS
+cnvkit.py coverage BAMfiles/a3T_panel_v1.bam my_targets.bed -o a3T.targetcoverage.cnn
+
+#COVERAGE TUMOR ANTITARGETS
+cnvkit.py coverage BAMfiles/a3T_panel_v1.bam my_antitargets.bed -o a3T.antitargetcoverage.cnn
+
+#FIX
+cnvkit.py fix a3T.targetcoverage.cnn a3T.antitargetcoverage.cnn reference10breast.cnn -o a3T.cnr
+
+#SEGMENT
+cnvkit.py segment a3T.cnr -o a3T.cns
+
+#CALL
+cnvkit.py call a3T.cns -o a3T.call.cns
+
+#SCATTER plot
+cnvkit.py scatter a3T.cnr -s a3T.cns -o a3T-scatter.pdf
+cnvkit.py scatter a3T.cnr -s a3T.call.cns -o a3T-scatter.call.pdf
+
+
+#DIAGRAM
+cnvkit.py diagram -s a3T.cns a3T.cnr
+cnvkit.py diagram -s a3T.cns a3T.cnr -o a3T-diagram.call.pdf
+
+
+#BATCH for all files
+cnvkit.py batch BAMfiles/*T*bam -r reference10breast.cnn -d batchRun/ --scatter --diagram
+
+#SCATTER with y-min=-3
+cnvkit.py scatter a1Textr2_panel_v1.cnr -s a1Textr2_panel_v1.cns --y-min -3 -o a1Textr2_panel_v1-scatter.ymin.pdf
+cnvkit.py scatter a2T_panel_v1.cnr -s a2T_panel_v1.cns --y-min -3 -o a2T_panel_v1-scatter.ymin.pdf
+cnvkit.py scatter a3T_panel_v1.cnr -s a3T_panel_v1.cns --y-min -3 -o a3T_panel_v1-scatter.ymin.pdf
+cnvkit.py scatter a4T_panel_v1.cnr -s a4T_panel_v1.cns --y-min -3 -o a4T_panel_v1-scatter.ymin.pdf
+cnvkit.py scatter a5T_panel_v1.cnr -s a5T_panel_v1.cns --y-min -3 -o a5T_panel_v1-scatter.ymin.pdf
+cnvkit.py scatter a6T_panel_v1.cnr -s a6T_panel_v1.cns --y-min -3 -o a6T_panel_v1-scatter.ymin.pdf
+cnvkit.py scatter a7T_panel_v1.cnr -s a7T_panel_v1.cns --y-min -3 -o a7T_panel_v1-scatter.ymin.pdf
+cnvkit.py scatter a8Textr2_panel_v1.cnr -s a8Textr2_panel_v1.cns --y-min -3 -o a8Textr2_panel_v1-scatter.ymin.pdf
+cnvkit.py scatter a9T_panel_v1.cnr -s a9T_panel_v1.cns --y-min -3 -o a9T_panel_v1-scatter.ymin.pdf
+cnvkit.py scatter a10T_panel_v1.cnr -s a10T_panel_v1.cns --y-min -3 -o a10T_panel_v1-scatter.ymin.pdf
+
+
+

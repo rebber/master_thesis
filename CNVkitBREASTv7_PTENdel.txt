@@ -1,0 +1,21 @@
+#commands used for CNVkit run on samples with apparent homozygos PTEN deletion seen in QDNAseq wgs data
+
+#exchange "PTENdel1" etc for the correct IDs for samples with homozygos deletion
+
+#Note: uses reference created with the wrong targets (v3)
+cnvkit.py batch /home/Crisp/rebecka/breastv7_bams/PTENdel1T_panel_v1.bam /home/Crisp/rebecka/breastv7_bams/PTENdel2T_panel_v1.bam /home/Crisp/rebecka/breastv7_bams/PTENdel3T_panel_v1.bam /home/Crisp/rebecka/breastv7_bams/PTENdel4T_panel_v1.bam -r /home/rebecka.bergstrom/cnvkit/1stRunBreast/reference10breast.cnn -d batchResults/ --diagram --scatter
+
+
+#Batch run including creation of correct reference for samples with apparent homozygos PTEN deletion seen in QDNAseq wgs data
+nohup cnvkit.py batch /home/Crisp/rebecka/breastv7_bams/PTENdel1T_panel_v1.bam /home/Crisp/rebecka/breastv7_bams/PTENdel2T_panel_v1.bam /home/Crisp/rebecka/breastv7_bams/PTENdel3T_panel_v1.bam /home/Crisp/rebecka/breastv7_bams/PTENdel4T_panel_v1.bam \
+--normal /home/Crisp/rebecka/breastv7_bams/{PTENdel1,PTENdel2,PTENdel3,PTENdel4}N_panel_v1.bam /home/rebecka.bergstrom/cnvkit/1stRunBreast/BAMfiles/*N_panel_v1.bam \
+--targets /proj/b2010040/private/nobackup/autoseq-genome/intervals/targets/clinseq_v1_targets.targets.slopped.bed --split \
+--annotate ~/cnvkit/refFlat_reformatted.txt \
+--fasta /proj/b2010040/private/nobackup/autoseq-genome/genome/human_g1k_v37_decoy.fasta \
+--access ~/cnvkit/access-5kb-mappable.hg19_reformatted.bed \
+--output-reference reference14breast.cnn \
+--output-dir batchResults --diagram --scatter &
+  
+  
+  
+  

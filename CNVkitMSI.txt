@@ -1,0 +1,45 @@
+#The commands used for CNVkit on MSI-samples
+
+#Using the bam-files from Jan 30 (in /home/Crisp/clinseq/MSI-PILOT/H*
+cnvkit.py batch /home/Crisp/clinseq/MSI-PILOT/*/panel/*T-*.bam \
+--normal /home/Crisp/clinseq/MSI-PILOT/*/panel/*B-*.bam \
+--targets /proj/b2010040/private/nobackup/autoseqer-genome/intervals/targets/clinseq_v4.targets.slopped.bed \
+--split --annotate ~/cnvkit/refFlat_reformatted.txt \
+--fasta /proj/b2010040/private/nobackup/autoseq-genome/genome/human_g1k_v37_decoy.fasta \
+--access ~/cnvkit/access-5kb-mappable.hg19_reformatted.bed \
+--output-reference referenceMSI24.cnn --output-dir batchResults/ \
+--diagram --scatter
+
+#Using nohup to avoid broken process upon logout, using the reference already created by the former command (which was broken halfway through .cnr file creation)
+nohup cnvkit.py batch /home/Crisp/clinseq/MSI-PILOT/*/panel/*T-*.bam -r referenceMSI24.cnn -d batchResults/ &
+  
+#Plot scatter plots with y-min=-3 (exchange "M1" etc towards correct sample IDs)
+cnvkit.py scatter M1T-TD1-CS1-capped.cnr -s M1T-TD1-CS1-capped.cns --y-min -3 -o M1T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M2T-TD1-CS1-capped.cnr -s M2T-TD1-CS1-capped.cns --y-min -3 -o M2T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M3T-TD1-CS1-capped.cnr -s M3T-TD1-CS1-capped.cns --y-min -3 -o M3T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M4T-TD1-CS1-capped.cnr -s M4T-TD1-CS1-capped.cns --y-min -3 -o M4T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M5T-TD1-CS1-capped.cnr -s M5T-TD1-CS1-capped.cns --y-min -3 -o M5T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M6T-TD1-CS1-capped.cnr -s M6T-TD1-CS1-capped.cns --y-min -3 -o M6T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M7T-TD1-CS1-capped.cnr -s M7T-TD1-CS1-capped.cns --y-min -3 -o M7T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M8T-TD1-CS1-capped.cnr -s M8T-TD1-CS1-capped.cns --y-min -3 -o M8T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M9T-TD1-CS1-capped.cnr -s M9T-TD1-CS1-capped.cns --y-min -3 -o M9T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M10T-TD1-CS1-capped.cnr -s M10T-TD1-CS1-capped.cns --y-min -3 -o M10T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M11T-TD1-CS1-capped.cnr -s M11T-TD1-CS1-capped.cns --y-min -3 -o M11T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M12T-TD1-CS1-capped.cnr -s M12T-TD1-CS1-capped.cns --y-min -3 -o M12T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M13T-TD1-CS1-capped.cnr -s M13T-TD1-CS1-capped.cns --y-min -3 -o M13T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M14T-TD1-CS1-capped.cnr -s M14T-TD1-CS1-capped.cns --y-min -3 -o M14T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M15T-TD1-CS1-capped.cnr -s M15T-TD1-CS1-capped.cns --y-min -3 -o M15T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M16T-TD1-CS1-capped.cnr -s M16T-TD1-CS1-capped.cns --y-min -3 -o M16T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M17T-TD1-CS1-capped.cnr -s M17T-TD1-CS1-capped.cns --y-min -3 -o M17T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M18T-TD1-CS1-capped.cnr -s M18T-TD1-CS1-capped.cns --y-min -3 -o M18T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M19T-TD1-CS1-capped.cnr -s M19T-TD1-CS1-capped.cns --y-min -3 -o M19T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M20T-TD1-CS1-capped.cnr -s M20T-TD1-CS1-capped.cns --y-min -3 -o M20T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M21T-TD1-CS1-capped.cnr -s M21T-TD1-CS1-capped.cns --y-min -3 -o M21T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M22T-TD1-CS1-capped.cnr -s M22T-TD1-CS1-capped.cns --y-min -3 -o M22T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M23T-TD1-CS1-capped.cnr -s M23T-TD1-CS1-capped.cns --y-min -3 -o M23T-TD1-CS1-capped-scatter.ymin.pdf
+cnvkit.py scatter M24T-TD1-CS1-capped.cnr -s M24T-TD1-CS1-capped.cns --y-min -3 -o M24T-TD1-CS1-capped-scatter.ymin.pdf
+
+
+
+
+

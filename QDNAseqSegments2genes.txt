@@ -1,0 +1,46 @@
+#Going from log2 CN ratio in QDNAseq bins to log2 CN ratio in corresponding genes
+
+#exchange "a1" etc towards correct sample names
+
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/Crisp/rebecka/breastv7_QDNAseq_reb/QDNAseq_nonadj/a1Textr2_wgs_reb.qdnaseq.txt | sort -k1,1 -k2,2n | 
+  bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - | 
+  python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/Crisp/rebecka/breastv7_QDNAseq_reb/QDNAseq_nonadj/segments2genes/a1Textr2_wgs_reb.qdnaseq.genes.bed
+
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/Crisp/rebecka/breastv7_QDNAseq_reb/QDNAseq_nonadj/a2T_wgs_reb.qdnaseq.txt | sort -k1,1 -k2,2n |
+  bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - |
+  python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/Crisp/rebecka/breastv7_QDNAseq_reb/QDNAseq_nonadj/segments2genes/a2T_wgs_reb.qdnaseq.genes.bed
+
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/Crisp/rebecka/breastv7_QDNAseq_reb/QDNAseq_nonadj/a3T_wgs_reb.qdnaseq.txt | sort -k1,1 -k2,2n |
+  bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - |
+  python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/Crisp/rebecka/breastv7_QDNAseq_reb/QDNAseq_nonadj/segments2genes/a3T_wgs_reb.qdnaseq.genes.bed
+
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/Crisp/rebecka/breastv7_QDNAseq_reb/QDNAseq_nonadj/a4T_wgs_reb.qdnaseq.txt | sort -k1,1 -k2,2n |
+  bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - |
+  python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/Crisp/rebecka/breastv7_QDNAseq_reb/QDNAseq_nonadj/segments2genes/a4T_wgs_reb.qdnaseq.genes.bed
+
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/Crisp/rebecka/breastv7_QDNAseq_reb/QDNAseq_nonadj/a5T_wgs_reb.qdnaseq.txt | sort -k1,1 -k2,2n |
+  bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - |
+  python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/Crisp/rebecka/breastv7_QDNAseq_reb/QDNAseq_nonadj/segments2genes/a5T_wgs_reb.qdnaseq.genes.bed
+
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/Crisp/rebecka/breastv7_QDNAseq_reb/QDNAseq_nonadj/a6T_wgs_reb.qdnaseq.txt | sort -k1,1 -k2,2n |
+  bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - |
+  python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/Crisp/rebecka/breastv7_QDNAseq_reb/QDNAseq_nonadj/segments2genes/a6T_wgs_reb.qdnaseq.genes.bed
+
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/Crisp/rebecka/breastv7_QDNAseq_reb/QDNAseq_nonadj/a7T_wgs_reb.qdnaseq.txt | sort -k1,1 -k2,2n |
+  bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - |
+  python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/Crisp/rebecka/breastv7_QDNAseq_reb/QDNAseq_nonadj/segments2genes/a7T_wgs_reb.qdnaseq.genes.bed
+
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/Crisp/rebecka/breastv7_QDNAseq_reb/QDNAseq_nonadj/a8Textr2_wgs_reb.qdnaseq.txt | sort -k1,1 -k2,2n |
+  bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - |
+  python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/Crisp/rebecka/breastv7_QDNAseq_reb/QDNAseq_nonadj/segments2genes/a8Textr2_wgs_reb.qdnaseq.genes.bed
+
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/Crisp/rebecka/breastv7_QDNAseq_reb/QDNAseq_nonadj/a9T_wgs_reb.qdnaseq.txt | sort -k1,1 -k2,2n |
+  bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - |
+  python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/Crisp/rebecka/breastv7_QDNAseq_reb/QDNAseq_nonadj/segments2genes/a9T_wgs_reb.qdnaseq.genes.bed
+
+python /home/Crisp/rebecka/qdnaseq2bed.py -i /home/Crisp/rebecka/breastv7_QDNAseq_reb/QDNAseq_nonadj/a10T_wgs_reb.qdnaseq.txt | sort -k1,1 -k2,2n |
+  bedtools map -c 5 -o mean -a /proj/b2010040/private/nobackup/autoseq-genome/genes/ensembl_genes_v75_cleaned_sorted.gtf -b - |
+  python /home/Crisp/rebecka/cnvgtf2bed.py -i /dev/stdin -n gene_name > /home/Crisp/rebecka/breastv7_QDNAseq_reb/QDNAseq_nonadj/segments2genes/a10T_wgs_reb.qdnaseq.genes.bed
+
+
+
